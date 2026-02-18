@@ -1,5 +1,3 @@
-# powershell-security-toolkit
-A collection of PowerShell scripts for security monitoring, log analysis, and system reporting
 # 🛡️ PowerShell Security Toolkit
 
 A collection of PowerShell scripts designed for security monitoring, log analysis, and system reporting. Built to help IT professionals and security analysts automate routine security checks and investigate potential issues.
