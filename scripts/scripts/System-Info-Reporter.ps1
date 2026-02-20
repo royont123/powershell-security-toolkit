@@ -137,16 +137,13 @@ try {
     $ProcessorCount = 0
     foreach ($Processor in $Processors) {
         $ProcessorCount++
-        $ProcessorInfo += @"
-Processor #$ProcessorCount:
-  Name: $($Processor.Name)
-  Manufacturer: $($Processor.Manufacturer)
-  Cores: $($Processor.NumberOfCores)
-  Logical Processors: $($Processor.NumberOfLogicalProcessors)
-  Max Clock Speed: $($Processor.MaxClockSpeed) MHz
-  Current Load: $($Processor.LoadPercentage)%
-
-"@
+        $ProcessorInfo += "Processor #" + $ProcessorCount + ":`n"
+        $ProcessorInfo += "  Name: " + $Processor.Name + "`n"
+        $ProcessorInfo += "  Manufacturer: " + $Processor.Manufacturer + "`n"
+        $ProcessorInfo += "  Cores: " + $Processor.NumberOfCores + "`n"
+        $ProcessorInfo += "  Logical Processors: " + $Processor.NumberOfLogicalProcessors + "`n"
+        $ProcessorInfo += "  Max Clock Speed: " + $Processor.MaxClockSpeed + " MHz`n"
+        $ProcessorInfo += "  Current Load: " + $Processor.LoadPercentage + "%`n`n"
     }
     
     Add-ReportSection "Processor Information" $ProcessorInfo
